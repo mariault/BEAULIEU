@@ -1,0 +1,21 @@
+{% include 'AquitaniBundle::generalBack.html.twig' %}
+
+
+{% block body %}
+    
+    <h1>Bienvenue dans votre home admin</h1>   
+<div class="container" >         
+{% for i in chantier %}
+    <div class="jumbotron col-sm-4 " >
+        <div class="row ">
+            {{ i.nom }}</br>
+            {{ i.datedefin | date('Y/m/d') }}</br>
+            <img src="../photo/{{ i.photo }}" class="img-responsive" ></br>
+            {{ i.activites.nom }}</br>
+            <a href="{{ path ('backadminedit',{'id': i.id})  }}"><input type="button" class="btn btn-warning" value="modifier"></a>
+            <a href="{{ path ('backadmindel',{'id': i.id})  }}"><input type="button" class="btn btn-danger" value="supprimer"></a>
+        </div>
+    </div> 
+    {% endfor %} 
+</div>       
+{% endblock %}     

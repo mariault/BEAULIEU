@@ -1,0 +1,4 @@
+services:
+#    aquitani.example:
+#        class: AquitaniBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

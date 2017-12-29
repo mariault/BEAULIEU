@@ -1,0 +1,21 @@
+{% include 'AquitaniBundle::generalBack.html.twig' %}
+
+
+{% block body %}
+    
+        
+<div class="container" > 
+    <div class="jumbotron" > 
+    <h2 class="align-center">Ajouter un chantier</h2>
+        <div class="form-group">
+            {{ form_start(form) }}
+            {{ form_row(form.nom) }}<br>
+            {{ form_row(form.description) }}<br>
+            {{ form_row(form.datedefin) }}<br>
+            {{ form_row(form.activites) }}<br>
+            {{ form_row(form.photo) }}<br>
+            {{ form_end(form) }}
+        </div>
+    </div>
+</div>
+{% endblock %}     
